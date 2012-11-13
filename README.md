@@ -29,7 +29,7 @@ Setup
 Using
 =====
 - Compile device.coffee: `coffee -c assets/js/device.coffee`
-- Run `coffee remote server.coffee` from the server directory
+- Run `coffee remote_server.coffee` from the server directory
 - Open http://localhost:4545 in a modern browser
 - To start playback, enter http://localhost:4545/dagingaa@comoyo.com/browser/playback/1837142 in another window.
 
