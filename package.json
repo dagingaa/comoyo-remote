@@ -1,0 +1,13 @@
+{
+  "name": "comoyo-remote",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "3.0.2",
+    "socket.io": "0.9.11",
+    "validator": "0.4.13"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  }
+}
