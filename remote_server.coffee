@@ -27,14 +27,11 @@ class Device
 
 users = new Array()
 
-# Configure the express.js framework
-app.configure ->
-    app.use("/assets", express.static(__dirname + "/assets"))
-
+app.use express.static "#{__dirname}/public"
 
 # Initialize routes
 app.get("/", (req,res) ->
-    res.sendfile(__dirname + "/assets/index.html")
+    res.sendfile("index.html")
 )
 
 app.get("/:user/:device/playback/:movie", (req,res) ->
@@ -74,8 +71,6 @@ console.log "HTTP server running at http://0.0.0.0:4545"
 
 # Initialize socket.io interface
 io = require("socket.io").listen(server)
-io.set("transports", ["xhr-polling"])
-io.set("polling duration", 10) 
 
 # Handle client connection
 io.sockets.on "connection", (socket) ->
